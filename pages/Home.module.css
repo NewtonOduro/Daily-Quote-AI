@@ -1,0 +1,55 @@
+.root {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  height: 100%;
+  padding: var(--space-md);
+}
+
+.filters {
+  flex-shrink: 0;
+}
+
+.cardArea {
+  flex: 1;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.error {
+  color: var(--color-danger);
+  font-size: var(--text-caption-size);
+  padding: var(--space-xs) var(--space-sm);
+}
+
+.footer {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.streak {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+}
+
+.flame {
+  font-size: var(--icon-md);
+}
+
+.streakValue {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  font-size: var(--text-caption-size);
+}

@@ -1,0 +1,88 @@
+.card {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.medal {
+  position: relative;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--icon-xl);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+}
+
+.unlocked .medal {
+  background: var(--color-bg-surface);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-glow);
+}
+
+.lock {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  font-size: var(--icon-sm);
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.title {
+  font-size: var(--text-h3-size);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.locked .title {
+  color: var(--color-text-muted);
+}
+
+.desc {
+  font-size: var(--text-caption-size);
+  color: var(--color-text-secondary);
+}
+
+.progressRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.track {
+  flex: 1;
+  height: 6px;
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-full);
+  transition: width var(--transition-medium);
+}
+
+.pct {
+  font-size: var(--text-caption-size);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  width: 34px;
+  text-align: right;
+}

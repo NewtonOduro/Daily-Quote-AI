@@ -1,0 +1,90 @@
+.block {
+  border-radius: var(--radius-sm);
+  background: linear-gradient(
+      90deg,
+      var(--color-bg-surface) 25%,
+      var(--color-bg-elevated) 50%,
+      var(--color-bg-surface) 75%
+    );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.card {
+  width: 100%;
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.mark {
+  width: 32px;
+  height: 32px;
+}
+
+.line {
+  height: 14px;
+  width: 100%;
+}
+
+.short {
+  width: 60%;
+}
+
+.row {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.thumb {
+  flex: 1;
+  height: 40px;
+}
+
+.gridCard {
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+}
+
+.headerLine {
+  height: 28px;
+  width: 40%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-md);
+}

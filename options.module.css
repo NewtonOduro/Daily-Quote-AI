@@ -1,0 +1,116 @@
+.options {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg-base);
+  color: var(--color-text-primary);
+}
+
+.header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--space-2xl);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: var(--icon-xl);
+}
+
+.brand {
+  font-size: var(--text-h1-size);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.tagline {
+  font-size: var(--text-caption-size);
+  color: var(--color-text-secondary);
+}
+
+.nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-2xl);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-glass-bg);
+  overflow-x: auto;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  height: 40px;
+  padding: 0 var(--space-md);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  font-size: var(--text-body-size);
+  white-space: nowrap;
+  transition: background var(--transition-fast), color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.tab:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.active {
+  background: var(--gradient-accent);
+  color: var(--color-accent-contrast);
+  border-color: transparent;
+}
+
+.tabIcon {
+  font-size: var(--icon-md);
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+.page {
+  min-height: 60vh;
+}
+
+/* 12-column responsive grid for stats/achievements and settings */
+.page > div {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gap);
+}
+
+.page > div > * {
+  grid-column: span 12;
+}
+
+@media (min-width: 768px) {
+  .page > div > * {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page > div > * {
+    grid-column: span 4;
+  }
+}

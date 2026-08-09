@@ -1,0 +1,26 @@
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.orb {
+  position: absolute;
+  border-radius: var(--radius-full);
+  opacity: 0.18;
+  filter: blur(60px);
+  will-change: transform;
+}
+
+.gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 20% 20%,
+    var(--color-accent-glow),
+    transparent 60%
+  );
+  opacity: 0.25;
+}

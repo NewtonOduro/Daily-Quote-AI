@@ -1,0 +1,169 @@
+/**
+ * themes.css
+ * ------------------------------------------------------------------
+ * Theme definitions for Daily Quotes AI.
+ *
+ * Six fully realized themes are exposed as scoped CSS variables that
+ * override the bridge variables declared in tokens.css. A theme name is
+ * applied on the root element via the `data-theme` attribute, e.g.
+ * `<html data-theme="dark">`. Components read `--color-*` tokens, so no
+ * component CSS knows about individual themes.
+ *
+ * Themes:
+ *   1. light    — Clean slate & crisp indigo accent
+ *   2. dark     — Deep charcoal background, glowing cyan primary
+ *   3. amoled   — Pure #000 black, neon violet accent, pure white text
+ *   4. sunset   — Rich warm terracotta, golden amber gradients, soft rose
+ *   5. ocean    — Deep navy #0a192f, teal accents, translucent glass
+ *   6. forest   — Deep emerald #0d2818, mint highlights, warm text
+ */
+
+/* ============================ LIGHT ============================ */
+[data-theme="light"] {
+  --color-bg-base: #f6f7fb;
+  --color-bg-surface: #ffffff;
+  --color-bg-elevated: #ffffff;
+  --color-text-primary: #101532;
+  --color-text-secondary: #5b6178;
+  --color-text-muted: #8a90a6;
+  --color-accent: #4f46e5;
+  --color-accent-strong: #4338ca;
+  --color-accent-glow: rgba(79, 70, 229, 0.4);
+  --color-accent-contrast: #ffffff;
+  --color-positive: #059669;
+  --color-warning: #d97706;
+  --color-danger: #dc2626;
+  --color-info: #2563eb;
+  --color-border: rgba(16, 21, 50, 0.1);
+  --color-ring: rgba(79, 70, 229, 0.45);
+  --color-glass-bg: rgba(255, 255, 255, 0.6);
+  --color-glass-border: rgba(255, 255, 255, 0.5);
+  --gradient-accent: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color-scheme: light;
+}
+
+/* ============================ DARK ============================ */
+[data-theme="dark"] {
+  --color-bg-base: #0f172a;
+  --color-bg-surface: #1e293b;
+  --color-bg-elevated: #334155;
+  --color-text-primary: #e2e8f0;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+  --color-accent: #06b6d4;
+  --color-accent-strong: #0891b2;
+  --color-accent-glow: rgba(6, 182, 212, 0.5);
+  --color-accent-contrast: #082f36;
+  --color-positive: #34d399;
+  --color-warning: #fbbf24;
+  --color-danger: #f87171;
+  --color-info: #38bdf8;
+  --color-border: rgba(226, 232, 240, 0.1);
+  --color-ring: rgba(6, 182, 212, 0.5);
+  --color-glass-bg: rgba(30, 41, 59, 0.6);
+  --color-glass-border: rgba(226, 232, 240, 0.12);
+  --gradient-accent: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+  color-scheme: dark;
+}
+
+/* ============================ AMOLED ============================ */
+[data-theme="amoled"] {
+  --color-bg-base: #000000;
+  --color-bg-surface: #0d0d0f;
+  --color-bg-elevated: #1a1a1e;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #c8c8d0;
+  --color-text-muted: #7a7a85;
+  --color-accent: #a855f7;
+  --color-accent-strong: #8b5cf6;
+  --color-accent-glow: rgba(168, 85, 247, 0.55);
+  --color-accent-contrast: #ffffff;
+  --color-positive: #4ade80;
+  --color-warning: #facc15;
+  --color-danger: #f87171;
+  --color-info: #818cf8;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-ring: rgba(168, 85, 247, 0.6);
+  --color-glass-bg: rgba(26, 26, 30, 0.7);
+  --color-glass-border: rgba(168, 85, 247, 0.2);
+  --gradient-accent: linear-gradient(135deg, #a855f7 0%, #6d28d9 100%);
+  color-scheme: dark;
+}
+
+/* ============================ SUNSET ============================ */
+[data-theme="sunset"] {
+  --color-bg-base: #fdf1ec;
+  --color-bg-surface: #fff6f2;
+  --color-bg-elevated: #ffffff;
+  --color-text-primary: #4a2218;
+  --color-text-secondary: #7a4a3b;
+  --color-text-muted: #b08a7a;
+  --color-accent: #e07b54;
+  --color-accent-strong: #d0562e;
+  --color-accent-glow: rgba(224, 123, 84, 0.45);
+  --color-accent-contrast: #ffffff;
+  --color-positive: #2f9e6e;
+  --color-warning: #d99023;
+  --color-danger: #d64545;
+  --color-info: #c17ae0;
+  --color-border: rgba(74, 34, 24, 0.1);
+  --color-ring: rgba(224, 123, 84, 0.5);
+  --color-glass-bg: rgba(255, 246, 242, 0.6);
+  --color-glass-border: rgba(224, 123, 84, 0.22);
+  --gradient-accent: linear-gradient(135deg, #f59e0b 0%, #e07b54 60%, #d0562e 100%);
+  color-scheme: light;
+}
+
+/* ============================ OCEAN ============================ */
+[data-theme="ocean"] {
+  --color-bg-base: #0a192f;
+  --color-bg-surface: #112240;
+  --color-bg-elevated: #1b3252;
+  --color-text-primary: #ccd6f6;
+  --color-text-secondary: #8892b0;
+  --color-text-muted: #64748b;
+  --color-accent: #2dd4bf;
+  --color-accent-strong: #14b8a6;
+  --color-accent-glow: rgba(45, 212, 191, 0.45);
+  --color-accent-contrast: #06251f;
+  --color-positive: #34d399;
+  --color-warning: #fbbf24;
+  --color-danger: #f87171;
+  --color-info: #60a5fa;
+  --color-border: rgba(204, 214, 246, 0.1);
+  --color-ring: rgba(45, 212, 191, 0.5);
+  --color-glass-bg: rgba(17, 34, 64, 0.55);
+  --color-glass-border: rgba(45, 212, 191, 0.18);
+  --gradient-accent: linear-gradient(135deg, #2dd4bf 0%, #2563eb 100%);
+  color-scheme: dark;
+}
+
+/* ============================ FOREST ============================ */
+[data-theme="forest"] {
+  --color-bg-base: #0d2818;
+  --color-bg-surface: #143523;
+  --color-bg-elevated: #1c4a30;
+  --color-text-primary: #f0f5ee;
+  --color-text-secondary: #b7cfb8;
+  --color-text-muted: #7fa38a;
+  --color-accent: #6ee7b7;
+  --color-accent-strong: #34d399;
+  --color-accent-glow: rgba(110, 231, 183, 0.4);
+  --color-accent-contrast: #072012;
+  --color-positive: #4ade80;
+  --color-warning: #fcd34d;
+  --color-danger: #fca5a5;
+  --color-info: #93c5fd;
+  --color-border: rgba(240, 245, 238, 0.1);
+  --color-ring: rgba(110, 231, 183, 0.5);
+  --color-glass-bg: rgba(20, 53, 35, 0.55);
+  --color-glass-border: rgba(110, 231, 183, 0.18);
+  --gradient-accent: linear-gradient(135deg, #6ee7b7 0%, #34d399 70%, #16a34a 100%);
+  color-scheme: dark;
+}
+
+/* Map exposed theming metadata for consumers (non-CSS ingests) */
+:root {
+  --theme-count: 6;
+}
+

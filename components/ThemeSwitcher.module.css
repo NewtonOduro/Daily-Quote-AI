@@ -1,0 +1,66 @@
+.wrap {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.swatch {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform var(--transition-fast), border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.swatch.sm {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+}
+
+.swatch.active {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-ring);
+}
+
+.emoji {
+  font-size: var(--icon-md);
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+}
+
+.check {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+  box-shadow: 0 0 0 2px var(--color-bg-base);
+}
+
+/* per-theme swatch backgrounds using global tokens */
+.light {
+  background: linear-gradient(135deg, #f6f7fb 0%, #4f46e5 100%);
+}
+.dark {
+  background: linear-gradient(135deg, #0f172a 0%, #06b6d4 100%);
+}
+.amoled {
+  background: linear-gradient(135deg, #000 0%, #a855f7 100%);
+}
+.sunset {
+  background: linear-gradient(135deg, #fdf1ec 0%, #e07b54 60%, #d0562e 100%);
+}
+.ocean {
+  background: linear-gradient(135deg, #0a192f 0%, #2dd4bf 100%);
+}
+.forest {
+  background: linear-gradient(135deg, #0d2818 0%, #6ee7b7 100%);
+}

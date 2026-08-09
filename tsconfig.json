@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "strict": false,
+    "isolatedModules": true,
+    "allowJs": true,
+    "checkJs": false,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    ".plasmo/index.d.ts",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.json"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    ".plasmo"
+  ]
+}

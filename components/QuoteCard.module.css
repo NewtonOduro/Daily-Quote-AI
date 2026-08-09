@@ -1,0 +1,145 @@
+.cardWrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: var(--gradient-accent);
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  flex: 1;
+}
+
+.quoteMark {
+  font-family: var(--font-serif);
+  font-size: 56px;
+  line-height: 0.6;
+  color: var(--color-accent);
+  opacity: 0.35;
+  user-select: none;
+}
+
+.text {
+  font-family: var(--font-serif);
+  font-size: var(--text-h1-size);
+  line-height: 1.45;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.meta {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.author {
+  font-size: var(--text-caption-size);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.categoryBadge {
+  font-size: var(--text-caption-size);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-md);
+}
+
+.actionBtn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: var(--icon-md);
+  transition: background var(--transition-fast), color var(--transition-fast),
+    transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.actionBtn:hover {
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-glow);
+}
+
+.actionBtn:active {
+  transform: scale(0.95);
+}
+
+.actionBtn.active {
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+}
+
+.errorState {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-xl);
+  text-align: center;
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-surface);
+  border: 1px dashed var(--color-border);
+}
+
+.errorIcon {
+  font-size: var(--icon-xl);
+}
+
+.errorText {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.errorHint {
+  font-size: var(--text-caption-size);
+  color: var(--color-text-muted);
+}

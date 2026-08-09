@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json.schemastore.org/chrome-manifest.json",
+  "manifest_version": 3,
+  "name": "Daily Quotes AI",
+  "description": "A production-grade Chrome extension delivering daily inspirational quotes with AI generation, statistics, streaks, themes, and achievements.",
+  "version": "1.0.0",
+  "default_locale": "en",
+  "icons": {
+    "16": "assets/icon-16.png",
+    "32": "assets/icon-32.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
+  },
+  "action": {
+    "default_title": "Daily Quotes AI",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icon-16.png",
+      "32": "assets/icon-32.png",
+      "48": "assets/icon-48.png",
+      "128": "assets/icon-128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/index.js",
+    "type": "module"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "storage",
+    "notifications",
+    "alarms",
+    "contextMenus",
+    "offscreen",
+    "commands",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "https://api.openai.com/*"
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
+      },
+      "description": "Open Daily Quotes AI popup"
+    },
+    "next_quote": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U",
+        "mac": "Command+Shift+U"
+      },
+      "description": "Fetch next quote"
+    },
+    "favorite_quote": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "Command+Shift+F"
+      },
+      "description": "Bookmark current quote as favorite"
+    }
+  }
+}
+
